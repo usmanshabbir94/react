@@ -5,7 +5,7 @@ import {createLogger} from 'redux-logger'
 let finalcreateStore= compose(
 	applyMiddleware(createLogger()))(createStore)
 
-export default function configureStore(initialState = {todos:  [] })
+export default function configureStore(initialState = {todos:[]})
 {
 	return finalcreateStore(reducer,initialState)
 }

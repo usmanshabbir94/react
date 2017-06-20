@@ -22,21 +22,23 @@ class TodoInput extends Component
 	handlesubmit(event)
 	{
 		event.preventDefault()
-		
+
 		this.props.dispatch(action.addtodo(this.state.inputText))
 
 	}
 	render(){
 		return (
 			<div>
-				<input 
-				type='text' 
-				placeholder="Type in your todo" 
-				value={this.state.inputText}
-				onChange={this.handleChange.bind(this)}
-				/>
-				<button onClick = {this.handlesubmit.bind(this)}>Submit</button>
-			</div>
+				<form onSubmit = {this.handlesubmit.bind(this)}>
+					<input 
+					type='text' 
+					placeholder="Type in your todo" 
+					value={this.state.inputText}
+					onChange={this.handleChange.bind(this)}
+					/>
+					<input type="submit" text="Submit" />
+				</form>
+			</div>	
 		)
 	}
 

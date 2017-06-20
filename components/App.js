@@ -6,7 +6,7 @@ import {connect} from 'react-redux'
 var App = React.createClass({
 	render()
 	{
-		return	<div><h1>Todo List</h1><TodoInput dispatch={this.props.dispatch}  /><TodoList todos={this.props.todos}/></div>
+		return	<div><h1>Todo List</h1><TodoInput dispatch={this.props.dispatch}  /><TodoList todos={this.props.todos} dispatch={this.props.dispatch}/></div>
 		
 	}
 })
