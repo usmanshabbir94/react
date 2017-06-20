@@ -23,3 +23,6 @@ app.listen(port, function(error) {
   if (error) throw error;
   console.log("Express server listening on port", port);
 });
+server.listen(config.port, config.ip, function () {
+  console.log('Express server listening on %d, in %s mode', config.port, app.get('env'));
+});
