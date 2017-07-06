@@ -5,6 +5,9 @@ import configureStore from '../redux/store'
 import {Provider} from 'react-redux'
 
 let initialState = {
+	userid:[{
+		id: 0
+	}],
 	todos:[{
 		id:0,
 		completed: false,
